@@ -14,6 +14,9 @@ This app is built with React, using Javascript, Node.js and express.js for backe
 
 # UI:
 ![HomePage](../WorkoutBuddy/assets/HomePage.png)
+![LoginPage](../WorkoutBuddy/assets/LoginPage.png)
+![SignupPage](../WorkoutBuddy/assets/SignupPage.png)
+
 
 ## Quick start :
 
