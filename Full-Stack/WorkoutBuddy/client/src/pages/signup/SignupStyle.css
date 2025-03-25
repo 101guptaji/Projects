@@ -16,7 +16,7 @@
 
     & h2{
         font-size: 40px;
-        color: var(--success);
+        color: var(--primary);
         text-align: center;
     }
 }

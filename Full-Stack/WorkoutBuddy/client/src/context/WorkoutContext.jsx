@@ -66,8 +66,8 @@ function WorkoutContext(props) {
                 setFormData({
                     id: null,
                     name: '',
-                    reps: '',
-                    load: ''
+                    reps: 0,
+                    load: 0
                 });
                 getWorkouts();
                 setIsEdit(false);
