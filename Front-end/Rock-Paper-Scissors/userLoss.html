@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock | Paper | Scissors </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="./images/rockPaperScissorsIcon.png">
+</head>
+
+<body onload="winPageLoad()">
+    <div class="score-container">
+        <div class="heading">
+            <h1>ROCK <br> PAPER <br>SCISSORS </h1>
+        </div>
+        <div class="scores">
+            <div class="score">
+                <h2 class="title">Computer<br> Score</h2>
+                <p class="comp-score">0</p>
+            </div>
+            <div class="score">
+                <h2 class="title">Your<br> Score</h2>
+                <p class="your-score">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paper lost AGAINST Scissors  -->
+    <div class="win" id="scissors-win">
+        <div class="user-choice">
+            <p>YOU PICKED</p>
+            <div class="loss-paper">
+                <img src="../images/hand-paper.png" alt="paper">
+            </div>
+            
+        </div>
+
+        <div class="win-result">
+            <h3>YOU LOST</h3>
+            <p>AGAINST PC</p>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+        </div>
+
+        <div class="pc-choice">
+            <p>PC PICKED</p>
+            <div class="win-scissor">
+                <img src="../images/hand-scissor.png" alt="scissor">
+            </div>
+        </div>
+    </div>
+
+    <!-- Rock lost AGAINST Paper  -->
+    <div class="win" id="paper-win">
+        <div class="user-choice">
+            <p>YOU PICKED</p>
+            <div class="loss-rock">
+                <img src="../images/hand-rock.png" alt="paper">
+            </div>
+        </div>
+
+        <div class="win-result">
+            <h3>YOU LOST</h3>
+            <p>AGAINST PC</p>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+        </div>
+
+        <div class="pc-choice">
+            <p>PC PICKED</p>
+            <div class="win-paper">
+                <img src="../images/hand-paper.png" alt="scissor">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scissors lost AGAINST Rock -->
+    <div class="win" id="rock-win">
+        <div class="user-choice">
+            <p>YOU PICKED</p>
+            <div class="loss-scissor">
+                <img src="../images/hand-scissor.png" alt="paper">
+            </div>
+        </div>
+
+        <div class="win-result">
+            <h3>YOU LOST</h3>
+            <p>AGAINST PC</p>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+        </div>
+
+        <div class="pc-choice">
+            <p>PC PICKED</p>
+            <div class="win-rock">
+                <img src="../images/hand-rock.png" alt="scissor">
+            </div>
+        </div>
+    </div>
+
+    <div class="game-rules inactive">
+        <h2>Game Rules</h2>
+        <div class="points">
+            <div class="point">
+                <p class="yellow-square"></p>
+                <p class="content">Rock beats scissors, scissors beat paper, and paper beats rock.</p>
+            </div>
+            <div class="point">
+                <p class="yellow-square"></p>
+                <p class="content">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just
+                    “rock, paper,
+                    scissors.”</p>
+            </div>
+            <div class="point">
+                <p class="yellow-square"></p>
+                <p class="content">Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+                </p>
+            </div>
+            <div class="point">
+                <p class="yellow-square"></p>
+                <p class="content">If both players lay down the same hand, each player lays down another hand</p>
+            </div>
+        </div>
+        <button class="cross_btn" id="cross_btn">
+            <p>X</p>
+        </button>
+    </div>
+
+    <div class="rules-btn">
+        <button class="btn" id="rule-btn">Rules</button>
+    </div>
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
