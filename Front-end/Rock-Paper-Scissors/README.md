@@ -22,8 +22,8 @@
 NOTE: For your turn in the game, you will have to choose the option manually by clicking on one of the options, but for your computer it will be decided by the logic you write which will be randomly decided.
 
 
-![Home Page](/UI/homePage.png)
-![User Win Page](/UI/userWinPage.png)
-![PC Page](/UI/pcWinPage.png)
-![Game rules popup](/UI/gameRules.png)
-![Hurray Page](/UI/hurrayUI.png)
+![Home Page](./UI/homePage.png)
+![User Win Page](./UI/userWinPage.png)
+![PC Page](./UI/pcWinPage.png)
+![Game rules popup](./UI/gameRules.png)
+![Hurray Page](./UI/hurrayUI.png)
