@@ -36,21 +36,21 @@ function choiceClicked(userChoice) {
     // user win
     if (userChoice === 'scissors' && pcChoice === 'paper') {
         userScore++;
-        userScoreTag.innerHTML = userScore;
+
         localStorage.setItem("userScore", JSON.stringify(userScore));
 
         window.location.href = "./userWin.html?win=scissors";
     }
     else if (userChoice === 'paper' && pcChoice === 'rock') {
         userScore++;
-        userScoreTag.innerHTML = userScore;
+
         localStorage.setItem("userScore", JSON.stringify(userScore));
 
         window.location.href = "./userWin.html?win=paper";
     }
     else if (userChoice === 'rock' && pcChoice === 'scissors') {
         userScore++;
-        userScoreTag.innerHTML = userScore;
+
         localStorage.setItem("userScore", JSON.stringify(userScore));
 
         window.location.href = "./userWin.html?win=rock";
@@ -59,21 +59,21 @@ function choiceClicked(userChoice) {
     // pc win
     if (pcChoice === 'scissors' && userChoice === 'paper') {
         pcScore++;
-        pcScoreTag.innerHTML = pcScore;
+
         localStorage.setItem("pcScore", JSON.stringify(pcScore));
 
         window.location.href = "./userLoss.html?win=scissors";
     }
     else if (pcChoice === 'paper' && userChoice === 'rock') {
         pcScore++;
-        pcScoreTag.innerHTML = pcScore;
+
         localStorage.setItem("pcScore", JSON.stringify(pcScore));
 
         window.location.href = "./userLoss.html?win=paper";
     }
     else if (pcChoice === 'rock' && userChoice === 'scissors') {
         pcScore++;
-        pcScoreTag.innerHTML = pcScore;
+
         localStorage.setItem("pcScore", JSON.stringify(pcScore));
 
         window.location.href = "./userLoss.html?win=rock";

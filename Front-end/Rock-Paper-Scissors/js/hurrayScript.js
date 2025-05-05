@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    createStars(10);
+    createStars(8);
 });
 
 function createStars(count) {
 
     const trophy = document.querySelector('.trophy');
-    const radius = 180; // Radius for circular path
+    const radius = 200; // Radius for circular path
 
     for (let i = 0; i < count; i++) {
         const star = document.createElement('div');
