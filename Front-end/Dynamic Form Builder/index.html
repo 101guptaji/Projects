@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Dynamic Form Builder - Part 2</title>
+</head>
+<body>
+    <div class="form-builder">
+        <h2>Form Builder</h2>
+        <!-- Create form name input box here -->
+        <input type="text" id="formName" placeholder="Form Name"/>
+        <select id="fieldType">
+            <!-- Create all the options of field type here -->
+            <option value="text">Text Field</option>
+            <option value="checkbox">Checkbox</option>
+            <option value="radio">Radio</option>
+        </select>
+        <input type="text" id="fieldLabel" placeholder="Field Label">
+        <!-- Create add and save buttons here -->
+        <button id="addField" onclick="addField()">
+            Add Field
+        </button>
+        <button id="saveForm" onclick="saveForm()">
+            Save Form
+        </button>
+
+    </div>
+
+    <!-- Create the display forms area here -->
+    <div id="formsContainer"></div>
+</body>
+</html>

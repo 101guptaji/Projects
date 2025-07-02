@@ -1,0 +1,21 @@
+Luck Game is a two-player game where players roll dice to move forward on a board. Each player progresses based on their dice roll, and the first to reach the destination wins.Assume that the dice has only 4 faces means on rolling the dice possible values would be 1,2,3,4 only. In this part there is a small modification that now players have two dice to play. Your task is to develop this game, blending luck and strategy for an exciting race to the finish line.
+
+Paste code inside Head Tag : <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
+
+
+Task for students
+
+Must to have
+An element with class “playerIdentity” should contain two elements which denote the players of the game.
+An element which represents the player’s turns must have class “playerTurn”. By default ‘Player-1’ has the class “playerTurn” which changes based on the player’s turn.
+The game must contain 10 cell(box) inside an element having class “gameBoard”.
+In this part you have two dice to play with. The class of each dice should be “dice” which contains the dice-icon representing the dice’s face the player got after rolling the both dice.
+An element having id as “totalPoints” should be present to display the numeric value of dice that player got after rolling the dice.
+An element with id “result” should be present to display the winner of the game. [ The winner will be the one who reaches the destination first. ]
+There should be a button with class “rollBtn” upon clicking it a method named as rollDice() should be called and the text of the button should be “Roll Dice”(case-insensitive).
+Add new button with class “resetBtn” upon clicking it a method named as “resetGame()” should be called and the text of button should be “Reset Game”(case-insensitive).[Do not use window.location.reload(), manually reset everything. ]
+Functionality tested
+rollDice() method should be called on clicking the button having text “Roll Dice”(case-insensitive), this function update the dice’s face with the number user got by rolling dice, also update the text of element with id “totalPoints” and update the player turns, as both player will roll dice alternatively (game starts by Player-1)
+On game completion an element with id “result” should display the winning player [i.e; ‘Person-1 wons’ or ‘Person-2 wons’].
+On game completion the ‘Roll Dice’ button becomes disabled, also the player’s turn should represent the last player who has rolled the dice.
+resetGame() method should be called on clicking the button having text “Reset Game”(case-insensitive), this function should reset the game means after clicking it everything reset to initial state as everything was at starting the game.
