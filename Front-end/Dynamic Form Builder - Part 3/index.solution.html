@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Builder</title>
+</head>
+<body>
+    <div class="form-builder">
+        <h2>Form Builder</h2>
+        <input type="text" id="formName" placeholder="Form Name">
+        <select id="fieldType">
+            <option value="text">Text Field</option>
+            <option value="checkbox">Checkbox</option>
+            <option value="radio">Radio Button</option>
+        </select>
+        <input type="text" id="fieldLabel" placeholder="Field Label">
+        <button id="addField">Add Field</button>
+        <button id="saveForm">Save Form</button>
+    </div>
+
+    <div id="formsContainer"></div>
+</body>
+</html>

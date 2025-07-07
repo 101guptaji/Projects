@@ -1,0 +1,48 @@
+/* Write your desired css here */
+body{
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+}
+
+.container form{
+    /* width: 100%; */
+    background: yellow;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+form input{
+    flex: 1;
+    padding: 5px 10px;
+}
+
+form select{
+    flex: 1;
+    padding: 5px 10px;
+}
+
+form button{
+    padding: 5px 20px;
+    background: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#budget-display{
+    background: aqua;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}

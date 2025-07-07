@@ -1,0 +1,28 @@
+roblem statement
+
+Budget Tracker - Part 5
+
+Effortlessly manage your finances with our sleek budget tracker, crafted using HTML, CSS, and JavaScript for simplicity and efficiency.
+
+Welcome, developers! Your task is to create a web-based Budget Tracker application using HTML, CSS, and JavaScript. This application currently allows users to input and categorize their transactions as either income or expenses, updating the total budget accordingly. Your focus will be to integrate functionality that prevents form submission when input fields are empty and to ensure that the form resets after each successful submission, and also handle the decimal and negative inputs to enhance the user experience.
+
+
+Task for students
+
+Must to have
+The id of description input box should be "description".
+The id of amount input box should be "amount".
+The vlaue of the income option should be "income".
+The vlaue of the expense option should be "expense".
+The type of the 'Add' button should be "submit".
+The id of the place where we will display the budget should be "total-budget".
+
+Functionality tested
+Add the income correctly in the budget.
+Deducts the expense from the budget.
+Prevents the form submission from empty input fields.
+Resets the values of the form after clicking the 'Add' button.
+Should be able to handle decimal values(no decimal input is allowed).
+Should be able to handle negative values(behave opposite to the positive values).
+Allow number input only in amount field.
+Should be able to handle large value.
