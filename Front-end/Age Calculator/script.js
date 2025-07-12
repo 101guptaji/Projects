@@ -8,24 +8,32 @@ const maxDate = `${yyyy}-${mm}-${dd}`;
 document.getElementById("birthday").setAttribute("max", maxDate);
     
 document.getElementById("btn")
-    .addEventListener("click", () => getAge());
+    .addEventListener("click", () => ageCalculation());
 
-function getAge() {
+function ageCalculation() {
     const result = document.querySelector("#result");
     const birthday = document.querySelector("#birthday")?.value;
     if (!birthday) {
         alert("Please enter your birthdate");
     }
-    // console.log(birthday);
-
-    const dob = new Date(birthday)
-    const doy = dob?.getFullYear() || yyyy;
-    const age = (yyyy - doy);
-
-    if (age===0) {
-        result.innerHTML = "You are "+age+" year old";
-    }
     else {
-        result.innerHTML = "You are " + age + " years old";
+        const age = getTheAge(birthday);
+        result.innerText = `${age}`;
     }
+}
+
+function getTheAge(birth) {
+  const currentDate = new Date();
+  const birthdayDate = new Date(birth);
+  let year = currentDate.getFullYear() - birthdayDate.getFullYear();
+  let month = currentDate.getMonth() - birthdayDate.getMonth();
+
+  if (
+    month < 0 ||
+    (month === 0 && currentDate.getDate() < birthdayDate.getDate())
+  ) {
+    year--;
+  }
+  return year;
+
 }
