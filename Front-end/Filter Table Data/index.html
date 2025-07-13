@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Attendance Table</title>
+  </head>
+  <body>
+    <div class="tableContainer">
+      <table>
+        <caption>
+          Student's Attendance Sheet
+        </caption>
+        <thead id="tHead"></thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </div>
+
+    <p>Use below button to know the student having Attendance &lt; 75%</p>
+    <!-- define button here -->
+    <button id="btn" onclick="calculateAttendanceLessThan75Per()">
+      <!-- Calculate & Display -->
+    </button>
+
+    <div class="result">
+      <table>
+        <caption>
+          Student have Attendance &lt; 75%
+        </caption>
+        <thead>
+          <tr>
+            <th>RollNo</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Attendance (%)</th>
+          </tr>
+        </thead>
+        <tbody id="resultTBody"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

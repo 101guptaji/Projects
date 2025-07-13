@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Variable Validation</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Variables</h1>
+      <p>
+        variable is an entity which store the value of defined data type, means
+        the type of variable should be same of the type of value.But programming
+        language like javascript and python are said loosely language, so here
+        you don't need to explicitely define the variable type whatever value
+        you assign to variable, the type of variable becomes the type of value.
+      </p>
+      <details>
+        <summary>
+          <b>Rules for variable creation followed in programming languages are : </b>
+          
+        </summary>
+        <ul style="list-style-position: inside;"> 
+          <li>The variable name always starts with alphabet letter or underscore.</li>
+          <li>Never use keyword, function, defined data types as variable name.</li>
+        </ul>
+      </details>
+    </header>
+    <main>
+      <section class="userInteraction">
+        <div>
+          <p>Your Favourite Programming Language</p>
+          <select id="progLang" onchange="resetPage()">
+            <option value="javascript">Javascript</option>
+            <option value="cpp">Cpp</option>
+            <option value="c">C</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+          </select>
+        </div>
+
+        <form onsubmit="verifyTheVariable(event)">
+          <label>
+            <p>Variable Name</p>
+            <input
+              type="text"
+              placeholder="write variable"
+              id="variableInput"
+              tabindex="1"
+            />
+          </label>
+          <button type="submit">Verify</button>
+        </form>
+      </section>
+
+      <section class="resultContainer">
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
