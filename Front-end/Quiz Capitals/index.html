@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz</title>
+	<link rel="stylesheet" href="./style.css" >
+</head>
+<body>
+    <h1>Simple Quiz</h1>
+    <form id="quiz" onsubmit="submitQuiz(event)">
+        <h3>1. What is the capital of France?</h3>
+        <input type="radio" name="q1" value="a"> a) New York<br>
+        <input type="radio" name="q1" value="b"> b) Delhi<br>
+        <input type="radio" name="q1" value="c"> c) Paris<br>
+        <input type="radio" name="q1" value="d"> d) Tokyo<br>
+
+        <h3>2. What is the capital of Spain?</h3>
+        <input type="radio" name="q2" value="a"> a) Madrid<br>
+        <input type="radio" name="q2" value="b"> b) Barcelona<br>
+        <input type="radio" name="q2" value="c"> c) Valencia<br>
+        <input type="radio" name="q2" value="d"> d) Malaga<br>
+
+        <h3>3. What is the capital of Italy?</h3>
+        <input type="radio" name="q3" value="a"> a) Venice<br>
+        <input type="radio" name="q3" value="b"> b) Milan<br>
+        <input type="radio" name="q3" value="c"> c) Rome<br>
+        <input type="radio" name="q3" value="d"> d) Naples<br>
+
+        <h3>4. What is the capital of Germany?</h3>
+        <input type="radio" name="q4" value="a"> a) Frankfurt<br>
+        <input type="radio" name="q4" value="b"> b) Berlin<br>
+        <input type="radio" name="q4" value="c"> c) Munich<br>
+        <input type="radio" name="q4" value="d"> d) Hamburg<br>
+
+        <h3>5. What is the capital of the UK?</h3>
+        <input type="radio" name="q5" value="a"> a) Manchester<br>
+        <input type="radio" name="q5" value="b"> b) London<br>
+        <input type="radio" name="q5" value="c"> c) Birmingham<br>
+        <input type="radio" name="q5" value="d"> d) Liverpool<br>
+
+        <h3>6. What is the capital of Japan?</h3>
+        <input type="radio" name="q6" value="a"> a) Osaka<br>
+        <input type="radio" name="q6" value="b"> b) Kyoto<br>
+        <input type="radio" name="q6" value="c"> c) Tokyo<br>
+        <input type="radio" name="q6" value="d"> d) Yokohama<br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h2 id="result"></h2>
+    <input type="button" id="summaryButton" value="View Summary" onclick="viewSummary();" style="display: none; margin-top: 20px; margin:0 auto">
+    <!-- Added margin-top to create spacing between result and button -->
+    <div id="summary"></div>
+	
+	<script src="./script.js" ></script>
+</body>
+</html>
+

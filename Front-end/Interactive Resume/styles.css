@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    color: #0099ff;
+}
+
+h2 {
+    color: #0077aa;
+}
+
+.info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background: #eee;
+    padding: 0 10px;
+}
+
+.show {
+    max-height: 100px;
+}

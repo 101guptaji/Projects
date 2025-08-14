@@ -1,91 +1,85 @@
-//Write your javascript code here
-const forms = {};
+const fieldType = document.getElementById('fieldType');
+const fieldLabel = document.getElementById('fieldLabel');
+const addField = document.getElementById('addField');
+const saveForm = document.getElementById('saveForm');
+const formNameInput = document.getElementById('formName');
+const formsContainer = document.getElementById('formsContainer');
+let dynamicForm = document.createElement('form');
 
-function isExists(arr, key) {
-    for (let x of arr) {
-        if (x.field === key) {
-            return true;
-        }
-    }
-    return false;
-}
-
-function addField() {
-    const formName = document.querySelector("#formName");
-    const fieldType = document.querySelector("#fieldType");
-    const fieldLabel = document.querySelector("#fieldLabel");
-
-    const name = formName.value.trim() || "Unnamed Form";
+addField.addEventListener('click', function() {
     const type = fieldType.value;
-    const field = fieldLabel.value.trim();
-
-    if (!field || field === '') {
+    const label = fieldLabel.value;
+    if(label === "")
+    {
         alert("Please add the field");
         return;
     }
 
-    // console.log(name, type, field);
-    const obj = { field, type };
-    if (forms[name]) {
-        if(!isExists(forms[name], field))
-            forms[name].push({ ...obj });
-    }
-    else {
-        forms[name] = [obj]
+    let newField;
+
+    switch(type) {
+        case 'text':
+            newField = document.createElement('input');
+            newField.type = 'text';
+            newField.placeholder = label;
+            newField.id = label;
+            const textLabel = document.createElement('label');
+            textLabel.htmlFor = label;
+            textLabel.textContent = label;
+            dynamicForm.appendChild(textLabel);
+            break;
+        case 'checkbox':
+            newField = document.createElement('input');
+            newField.type = 'checkbox';
+            newField.id = label;
+            const checkboxLabel = document.createElement('label');
+            checkboxLabel.htmlFor = label;
+            checkboxLabel.textContent = label;
+            dynamicForm.appendChild(checkboxLabel);
+            break;
+        case 'radio':
+            newField = document.createElement('input');
+            newField.type = 'radio';
+            newField.name = 'dynamicRadio';
+            newField.id = label;
+            const radioLabel = document.createElement('label');
+            radioLabel.htmlFor = label;
+            radioLabel.textContent = label;
+            dynamicForm.appendChild(radioLabel);
+            break;
     }
 
-    // console.log(forms);
+    dynamicForm.appendChild(newField);
+    fieldLabel.value = '';
     alert("Your field in the form is added successfully");
+    
+});
 
-    fieldLabel.value = "";
-}
+saveForm.addEventListener('click', function() {
+    const formName = formNameInput.value;
 
-function saveForm() {
-    const formName = document.querySelector("#formName");
-    const name = formName.value.trim() || "Unnamed Form";
+    // Check if there are valid fields in the form (fields with an id attribute)
+    const hasValidFields = Array.from(dynamicForm.children).some(child => child.id);
 
-    if (!forms[name] || forms[name].length === 0) {
-        alert("Please add at least one field with a label to the form before saving.");
+    console.log('Form children count:', dynamicForm.childElementCount, 'Has valid fields:', hasValidFields);
+
+    // Check if there are no valid fields in the form
+    if (!hasValidFields) {
+        alert('Please add at least one field with a label to the form before saving.');
         return;
     }
 
-    displayForm();
-}
+    const formContainer = document.createElement('div');
+    formContainer.classList.add('form-container');
 
-function displayForm() {
-    const container = document.querySelector("#formsContainer");
-    container.innerHTML = '';
+    const formTitle = document.createElement('h3');
+    formTitle.classList.add('form-title');
+    formTitle.textContent = formName;
+    formContainer.appendChild(formTitle);
 
-    for (form in forms) {
-        // console.log(form);
-        const heading = document.createElement("h2");
-        heading.innerHTML = form;
-        container.appendChild(heading);
+    formContainer.appendChild(dynamicForm.cloneNode(true)); // Clone the form to keep its current state
+    formsContainer.appendChild(formContainer);
 
-        const formContainer = document.createElement("form");
-        forms[form].forEach((entry, index) => {
-            const div = document.createElement("div");
-
-            const inputId = `${form}_${entry.field}_${index}`; // unique id
-            const label = document.createElement("label");
-            label.textContent = entry.field;
-            label.setAttribute("for", inputId); // ? associate label with input
-
-            const input = document.createElement("input");
-            input.setAttribute("type", entry.type);
-            input.setAttribute("id", inputId);
-
-            // For checkboxes and radios, also set a name attribute for grouping
-            if (entry.type === "radio") {
-                input.setAttribute("name", form + "_" + entry.field);
-            }
-
-            div.appendChild(label);
-            div.appendChild(input);
-
-            formContainer.appendChild(div);
-        });
-
-        container.appendChild(formContainer);
-    }
-}
+    // Reset the original form for new inputs
+    dynamicForm = document.createElement('form');
+});

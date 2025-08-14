@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Form</h1>
+        <form id = "form" action="#" method="post" onsubmit="handleForm(event)">
+         <!-- Create your input boxes and submit buttons here -->
+         <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="coding ninjas" required>
+         </div>
+         <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="codingninjas@codingninjas.com" required>
+         </div>
+         <div>
+            <label for="password">Password:</label>
+            <input id="pass" type="password" name="password" placeholder="codingninja@123" required>
+         </div>
+         <button id="btn" type="submit">Submit</button>
+        </form>
+        <div id = "users"></div>
+      </div> 
+</body>
+</html>

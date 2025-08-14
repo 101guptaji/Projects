@@ -5,14 +5,12 @@ const images = [
     'https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=600'
   ];
 
-
 let index = 0;
 const n = images.length;
 
 function updateImage() {
   const carouselImg = document.getElementById("carouselImg");
-  let img = images[index % n];
-  carouselImg.setAttribute("src", img);
+  carouselImg.src = images[index % n];
 
   scheduleAutoSlide();
 }
@@ -31,11 +29,11 @@ function previousImg() {
   updateImage();
 }
 
+let timerId;
 function scheduleAutoSlide() {
-  setTimeout(() => {
-    index++;
-    updateImage();
-  }, 1000)
+  clearTimeout(timerId);
+
+  timerId = setTimeout(nextImg, 2000)
 }
 
 updateImage();
