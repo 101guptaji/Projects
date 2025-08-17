@@ -6,12 +6,9 @@
 }
 
 .input-area {
-    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
-    gap: 10px;
 }
 
 .input-area input {
@@ -21,10 +18,7 @@
 }
 
 .input-area button {
-    flex: 1;
-    width: fit-content;
     padding: 5px 15px;
-    margin: 0 auto;
 }
 
 #expenseList li {
