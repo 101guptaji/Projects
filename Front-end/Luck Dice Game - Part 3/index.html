@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <script src='https://kit.fontawesome.com/b3348ae33f.js' crossorigin='anonymous'></script>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Two Dice Luck Game</h1>
+    <div class="playerIdentity">
+        <p class="playerTurn"><i class="fa-solid fa-person-walking" style="color: #FFD43B;"></i> <span>Person 1</span>
+        </p>
+        <p><i class="fa-solid fa-person-walking" style="color: #ff01cc;"></i> <span>Person 2</span></p>
+    </div>
+    <div class="gameBoard">
+        <div class="box relativePosition">
+            <span class="labelled">start</span>
+            <i class="fa-solid fa-person-walking" style="color: #FFD43B;" id="player-1"></i>
+            <i class="fa-solid fa-person-walking" style="color: #ff01cc;" id="player-2"></i>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box relativePosition">
+            <span class="labelled">end</span>
+        </div>
+    </div>
+
+    <div class="allDiceContainer">
+        <div class="diceContainer">
+            <div class="dice">
+                <i class="fa-solid fa-dice" id="dice-1"></i>
+            </div>
+            <h5>Dice 1</h5>
+        </div>
+        <div class="diceContainer">
+            <div class="dice">
+                <i class="fa-solid fa-dice" id="dice-2"></i>
+            </div>
+            <h5>Dice 2</h5>
+        </div>
+    </div>
+
+    <div class="gameInfo">
+        <p>Total Points : <span id="totalPoints">0</span></p>
+        <h3 id="result"></h3>
+    </div>
+
+    <div class="allBtns">
+        <button class="btn rollBtn" onclick="rollDice()">
+            Roll Dice
+        </button>
+        <button class="btn resetBtn" onclick="resetGame()">
+            Reset Game
+        </button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
