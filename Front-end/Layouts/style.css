@@ -1,0 +1,27 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 200px auto 1fr;
+    grid-auto-rows: 100px auto;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+}
+.header {
+  background-color: lightgray;
+  border: 1px solid black;
+  grid-column: 1/span 3;
+  grid-row: 1;
+}
+
+.left-section {
+  background-color: lightblue;
+  border: 1px solid black; 
+  grid-column: 1/span 2;
+  grid-row: 2/span 4;
+}
+
+.right-section {
+  background-color: lightgreen;
+  border: 1px solid black; 
+  grid-column: 3;
+  grid-row: 2/span 2;
+}

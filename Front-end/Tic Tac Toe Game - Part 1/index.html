@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Part-1</title>
+	<link rel="stylesheet" href="index.css" >
+</head>
+
+<body>
+    <h1>Tic-Tac-Toe Game</h1>
+    <div class="selectionBox">
+        <div class="displayResult">
+            <p>Turn : <span id="playerTurn">X</span></p>
+            <span id="result"></span>
+        </div>
+    </div>
+
+    <div class="gameBoard">
+        <div id="number-1" onclick="isWin(event)"></div>
+        <div id="number-2" onclick="isWin(event)"></div>
+        <div id="number-3" onclick="isWin(event)"></div>
+        <div id="number-4" onclick="isWin(event)"></div>
+        <div id="number-5" onclick="isWin(event)"></div>
+        <div id="number-6" onclick="isWin(event)"></div>
+        <div id="number-7" onclick="isWin(event)"></div>
+        <div id="number-8" onclick="isWin(event)"></div>
+        <div id="number-9" onclick="isWin(event)"></div>
+    </div>
+
+
+    <button class="restartBtn" onclick="restartGame()">Restart</button>
+
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
